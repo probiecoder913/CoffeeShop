@@ -1,0 +1,16 @@
+{
+  "name": "coffeewebsitev2",
+  "version": "1.0.0",
+  "description": "added nodejs in the old coffee website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ankit Yadav",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "init": "^0.1.2",
+    "nodemon": "^2.0.15"
+  }
+}
