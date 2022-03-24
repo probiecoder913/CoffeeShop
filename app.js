@@ -21,11 +21,6 @@ app.post("/",function(req,res){
     res.redirect("/");
 })
 
-app.listen(3000,function(err){
-    if(err){
-        console.log(err);
-    }
-    else{
-    console.log("Listening on PORT 3000");
-    }
+app.listen(process.env.PORT||3000,function(){
+    console.log("Listening" +__dirname);
 })
