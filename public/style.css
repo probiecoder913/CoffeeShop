@@ -501,7 +501,7 @@ padding: 10px 15px 10px 15px;
         transform: scale(.8);
     }
     .menucards h1,h2{
-        margin:auto;
+        margin-bottom: 0;
     }
     hr{
         margin-top: 10px;
@@ -526,5 +526,9 @@ padding: 10px 15px 10px 15px;
     }
     .menucards h2{
         font-size: large;
+        margin-bottom: 0;
+    }
+    .menucards h1{
+        font-size: x-large;
     }  
 }
