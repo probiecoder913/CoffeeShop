@@ -5,36 +5,13 @@
     <title>One Long page Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style2.css">
+    <link href="navbarcss.css" rel="stylesheet">
 </head>
 <body>
     <!--Nav-bar-->
     <div class="logo"><a href="/#home"><img src="img/logo.png" width="100px"></a></div>
     <section id="navbar">
         <!---Hamburger--->
-        <div class="wrap" onclick="display()">
-            <div class="line"></div>
-        </div>
-        <div class="hamMenu">
-            <ul>
-                <a href="/#home"><li>home</li></a>
-                <a href="/#menu"><li>menu</li></a>
-                <a href="/#about"><li>about</li></a>
-                <a href="/#footer"><li>help</li></a>
-            </ul>
-        </div>
-        <script>
-            var flag = 1;
-            function display() {
-                if(flag){
-                    document.getElementsByClassName("hamMenu")[0].style.visibility= "visible";
-                    flag=0;
-                }
-                else {
-                    document.getElementsByClassName("hamMenu")[0].style.visibility = "hidden";
-                    flag=1;
-                }                
-    }
-        </script>
     <!--End of Hamburger-->
     <div class="nav">
             <ul>

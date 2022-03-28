@@ -10,19 +10,19 @@
   
   /* Track */
   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
+    box-shadow: inset 0 0 5px rgb(128, 128, 128); 
     border-radius: 10px;
-  }
-   
+    background-color: transparent;
+}
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(226, 127, 91); 
+    background: rgb(161, 43, 0); 
     border-radius: 10px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(163, 82, 53); 
+    background: rgb(255, 70, 3); 
   }
 /*----------Scrollbar End-----------*/
 /*----------HamBurger Start-----------*/
@@ -111,13 +111,14 @@ display: flex;
 justify-content: space-between;
 background: white;
 width: 100%;
-position: static;
+position: fixed;
 z-index: 3;
 height: 40px;
+visibility: visible;
 }
 .logo{
-    margin-top: 0px;
-    margin-left: 30px;
+    top: 0px;
+    left: 30px;
     position: fixed;
     z-index: 4;
 }
@@ -159,16 +160,16 @@ background-repeat: no-repeat;
 position: relative;
 display: flex;
 align-items: center;
-justify-content: center;
+justify-content: space-evenly;
 min-height: 100vh;
 z-index: 0;
+top: 0px;
 }
 .homepage{
 z-index: 1;
-max-width: 1200px;
-margin-top: 80px;
+max-width: fit-content;
 align-self: center;
-margin-left: 10px;
+margin:2rem;
 }
 a{
     text-decoration: none;
@@ -188,7 +189,7 @@ a{
 }
 #home h1{
     display: block;
-    width: 100%;
+    width: fit-content;
     font-size: 4.5em;
     position:relative;
     letter-spacing: .1rem;
@@ -202,10 +203,9 @@ text-transform: uppercase;
 letter-spacing: .1rem;
 transition: .3s ease;
 font-size: 10px;
-margin-top: 20px;
+margin-top: 4rem;
 margin-bottom: 20px;
 padding: 10px 15px 10px 15px;
-
 }
 #home .cta:hover{
     color:rgb(41, 23, 5);
@@ -462,10 +462,10 @@ padding: 10px 15px 10px 15px;
     }
 /*==================MEDIA QUERRY============*/
 @media all and (max-width: 768px){
-    .wrap{
-        visibility: visible;
-    }
     .nav{
+        visibility: hidden;
+    }
+    #navbar{
         visibility: hidden;
     }
     .nav li{
@@ -474,16 +474,34 @@ padding: 10px 15px 10px 15px;
     .logo{  
         position: fixed;
         z-index: 4;
+        left: .5rem;
+        top: 1rem;
+    }
+    .homepage{
+        float: right;
     }
     .cta{
     font-size: larger;
     }
+    #menu{
+        max-height: fit-content;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        color: rgba(110, 47, 31, 0.897);
+        z-index: 0;
+        }
     .menucards{
         display: flex;
         flex-direction: column;
         height: fit-content;
         margin: 20px auto;
-
+        margin-top: 20px;
+        transform: scale(.8);
+    }
+    .menucards h1,h2{
+        margin:auto;
     }
     hr{
         margin-top: 10px;
@@ -498,5 +516,15 @@ padding: 10px 15px 10px 15px;
         background-attachment: fixed;
         height: fit-content;
     }
-    
+    .about .service_item:hover{
+        transform: scale(1);
+    }
+}
+@media all and (max-width: 390px){
+    .menucards{
+        transform: scale(.8);
+    }
+    .menucards h2{
+        font-size: large;
+    }  
 }
