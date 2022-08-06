@@ -20,7 +20,7 @@ app.get("/aim",function(req,res){
 app.post("/",function(req,res){
     res.redirect("/");
 })
-
-app.listen(process.env.PORT||3000,function(){
-    console.log("Listening" +__dirname);
+var port = process.env.PORT;
+app.listen(port||3000,function(){
+    console.log("Listening on PORT " + port);
 })
